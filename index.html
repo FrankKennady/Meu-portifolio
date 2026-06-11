@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Metal+Mania&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-----------------------MENU----------------------->
+    <nav>
+        <a class="main" href="#home">Inicio</a>
+        <a class="main" href="#about">Sobre</a>
+        <a class="main" href="#projects">Projetos</a>
+        <a class="main" href="#contact">Contato</a>
+    </nav>
+
+    <!-----------------------INICIO----------------------->
+    <section id="home">
+        <div class="container-text">
+            <p class="ola">Olá, eu sou</p>
+            <h1>Frank Kennady</h1>
+            <h2 class="subtitle-home">Desenvolvedor Front-end 💻</h2>
+            <p class="text-home">Criando interfaces modernas, responsivas e funcionais que propocionam a melhor
+                experiência para o usuário.
+            </p>
+            <button class="btn-scroll btn-view-project" data-target="projects">Ver Projetos</button>
+            <button class="btn-scroll btn-get-in-touch" data-target="contact">Entrar em contato</button>
+        </div>
+
+        <div class="container-img">
+            <img class="hero-image" src="./assets/perfil-inicio.png" alt="perfil">
+        </div>
+    </section>
+    <!-----------------------SOBRE----------------------->
+    <section id="about">
+        <h2 id="about-me">Sobre Mim</h2>
+        <div class="about-container">
+            <div>
+                <p id="text-about"> Olá, sou Frank Kennady, estudante de Análise e Desenvolvimento de Sistemas e aluno
+                    do curso Full Stack no DevClub. Atualmente, trabalho na área administrativa e com análise de dados,
+                    e estou em transição de carreira. Com foco em Front-End, mas aberto a desafios no Back-End, possuo
+                    uma sólida base técnica em HTML5, CSS3 e JavaScript (ES6+), e estou em constante aprimoramento em
+                    Node.js e React.
+                    <br><br>
+                    Tenho experiência prática no desenvolvimento de aplicações web responsivas e acessíveis. Sou
+                    apaixonado por programação e demonstro habilidade em transformar requisitos de usuários em
+                    interfaces intuitivas, que priorizam a experiência do usuário (UX) e a performance. Além disso,
+                    possuo conhecimento em versionamento de código com Git e metodologias ágeis. Meu histórico em
+                    suporte técnico e análise de dados reforça minha capacidade analítica e minha agilidade na resolução
+                    de problemas. Proativo, autodidata e com excelente comunicação, busco contribuir para equipes de
+                    desenvolvimento e projetos desafiadores. </p>
+                <br>
+
+
+
+                <div class="box-front-end">
+                    <img src="https://img.shields.io/badge/HTML5-E34C26?style=for-the-badge&logo=html5&logoColor=white"
+                        alt="HTML">
+                    <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white"
+                        alt="CSS">
+                    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black"
+                        alt="JAVASCRIPTS">
+                    <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white"
+                        alt="Node.js">
+                    <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white"
+                        alt="Git">
+                    <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"
+                        alt="GitHub">
+                </div>
+                <div class="curriculo">
+                    <a href="./assets/Curriculo Frank Kennady. FullStack pro.pdf" target="_blank">Ver Currículo</a>
+                </div>
+            </div>
+
+            <div class="about-side-box">
+                <div class="box">
+                    <img class="img-box" src="./assets/codigo.png" alt="desenvolvimento-web">
+                    <p class="text-box">Desenvolvimento Web</p>
+                </div>
+
+                <div class="box">
+                    <img class="img-box" src="./assets/telas.png" alt="telas-responsivas">
+                    <p class="text-box">interfaces responsivas</p>
+                </div>
+
+                <div class="box">
+                    <img class="img-box" src="./assets/raio.png" alt="performance-otimizada ">
+                    <p class="text-box">Performace Otimizada</p>
+                </div>
+
+                <div class="box">
+                    <img class="img-box" src="./assets/codigo.png" alt="código-limpo">
+                    <p class="text-box">Código Limpo</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-----------------------PROJETOS----------------------->
+    <section id="projects">
+        <h2>Meus Projetos</h2>
+        <div class="container-projects"></div>
+        <div class="more-projects">
+            <a href="https://github.com/FrankKennady?tab=repositories" target="_blank" rel="noopener noreferrer">Ver
+                Mais Projetos</a>
+        </div>
+        <!-----------------------CONTATOS----------------------->
+    </section>
+    <section id="contact">
+        <div class="contact-text">
+            <h2>Contato</h2>
+            <p>Sempre aberto para colaborações, discussões sobre código e novas oportunidades!</p>
+            <h3>Entre em contato:</h3>
+
+            <div class="social-container">
+                <button id="btn-whatsapp" class=" btn-social" data-target="contact-whatsapp">
+                    <img src="./assets/whatsapp.png" alt="github"> whatsapp
+                </button>
+                <button id="btn-github" class="btn-social">
+                    <img src="./assets/github.png" alt="github"> GitHub
+                </button>
+
+                <button id="btn-linkedin" class="btn-social">
+                    <img src="./assets/linkedin.png" alt="linkedin"> LinkedIn
+                </button>
+
+                <button id="btn-instagram" class="btn-social">
+                    <img src="./assets/instagram.png" alt="instagram"> Instagram
+                </button>
+                
+                <button id="btn-email" class="btn-social">
+                    <img src="./assets/email.png" alt="email"> Email
+                </button>
+            </div>
+        </div>
+        <div class="img-contact">
+            <img class="image-contact" src="./assets/perfil.png" alt="perfil">
+        </div>
+
+    </section>
+    <!-----------------------RODAPÉ----------------------->
+    <footer>
+        <p>©️2026 Frank Kennady. Todos os direitos reservados</p>
+    </footer>
+    <a class="top-arrow" href="#home">
+        <img src="./assets/seta.png" alt="topo">
+    </a>
+</body>
+<script src="./script.js"></script>
+
+</html>
