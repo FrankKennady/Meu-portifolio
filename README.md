@@ -4,7 +4,7 @@ Portfólio pessoal desenvolvido com HTML, CSS e JavaScript puro, apresentando me
 
 ## 🔗 Deploy
 
-👉 [Acessar o portfólio](https://frankkennady.github.io)
+👉 [Acessar o portfólio](https://portifolio-frank-kennady.vercel.app/)
 
 ---
 
