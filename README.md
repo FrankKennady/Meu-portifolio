@@ -9,8 +9,9 @@ Portfólio pessoal desenvolvido com HTML, CSS e JavaScript puro, apresentando me
 ---
 
 ## 📸 Preview
+<img width="1883" height="914" alt="image" src="https://github.com/user-attachments/assets/d601e04a-0fd0-4df9-93ed-fe83dbb595d6" />
 
-> Seções: Início · Sobre Mim · Projetos · Contato
+
 
 ---
 
