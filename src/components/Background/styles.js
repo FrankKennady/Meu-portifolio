@@ -9,7 +9,7 @@ export const Wrapper = styled.div`
   background: ${({ theme }) => theme.colors.bg};
 `;
 
-export const Grid = styled.div`
+export const Grid = styled(motion.div)`
   position: absolute;
   inset: 0;
   background-image:
@@ -19,9 +19,28 @@ export const Grid = styled.div`
   mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 90%);
 `;
 
+export const GridGlow = styled(motion.div)`
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(212, 255, 36, 0.22) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(212, 255, 36, 0.22) 1px, transparent 1px);
+  background-size: 46px 46px;
+`;
+
+export const Spotlight = styled(motion.div)`
+  position: absolute;
+  inset: 0;
+`;
+
+export const Layer = styled(motion.div)`
+  position: absolute;
+  inset: 0;
+`;
+
 export const Blob = styled(motion.div)`
   position: absolute;
   border-radius: 50%;
-  filter: blur(90px);
+  filter: blur(100px);
   opacity: 0.35;
 `;

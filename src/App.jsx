@@ -3,6 +3,7 @@ import Background from './components/Background/index.jsx';
 import Navbar from './components/Navbar/index.jsx';
 import ScrollProgress from './components/ScrollProgress/index.jsx';
 import ScrollTopButton from './components/ScrollTopButton/index.jsx';
+import Marquee from './components/Marquee/index.jsx';
 import Hero from './sections/Hero/index.jsx';
 import About from './sections/About/index.jsx';
 import Projects from './sections/Projects/index.jsx';
@@ -18,6 +19,7 @@ export default function App() {
       <Navbar />
       <main>
         <Hero />
+        <Marquee />
         <About />
         <Projects />
         <Contact />

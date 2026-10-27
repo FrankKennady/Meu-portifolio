@@ -1,6 +1,6 @@
-import { Github } from 'lucide-react';
+import { ArrowUpRight, Github } from 'lucide-react';
 import SectionHeading from '../../components/SectionHeading/index.jsx';
-import { featuredProjects, projects } from '../../data/projects.js';
+import { featuredProjects, projects, ksdev } from '../../data/projects.js';
 import FeaturedCard from './FeaturedCard.jsx';
 import ProjectCard from './ProjectCard.jsx';
 import * as S from './styles.js';
@@ -14,6 +14,28 @@ export default function Projects() {
           title="Sistemas & Projetos"
           subtitle="Dos sistemas full stack em produção aos projetos de estudo que me trouxeram até aqui."
         />
+
+        <S.KsDevBanner
+          href={ksdev.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.4 }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+          whileHover={{ y: -4 }}
+        >
+          <S.KsDevMark>KS</S.KsDevMark>
+          <div>
+            <S.KsDevTitle>
+              {ksdev.nome} <span>· {ksdev.tagline}</span>
+            </S.KsDevTitle>
+            <S.KsDevText>{ksdev.descricao}</S.KsDevText>
+          </div>
+          <S.KsDevCta>
+            ksdev.systems <ArrowUpRight size={16} />
+          </S.KsDevCta>
+        </S.KsDevBanner>
 
         <S.FeaturedList>
           {featuredProjects.map((project, i) => (

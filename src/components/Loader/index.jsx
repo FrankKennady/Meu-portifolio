@@ -52,10 +52,15 @@ export default function Loader() {
 
   return (
     <AnimatePresence>
+      {/* Saída em "cortina": o painel escuro sobe revelando o lime, que sobe em seguida — transição de vídeo */}
+      {loading && (
+        <S.Curtain key="curtain" exit={{ y: '-100%', transition: { duration: 0.7, delay: 0.18, ease: [0.76, 0, 0.24, 1] } }} />
+      )}
       {loading && (
         <S.Overlay
+          key="overlay"
           initial={{ opacity: 1 }}
-          exit={{ opacity: 0, transition: { duration: 0.6, ease: 'easeInOut' } }}
+          exit={{ y: '-100%', transition: { duration: 0.7, ease: [0.76, 0, 0.24, 1] } }}
         >
           <S.Glow />
 
@@ -80,7 +85,7 @@ export default function Loader() {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.3, duration: 0.5 }}
             >
-              Desenvolvedor Front-End
+              Desenvolvedor Full Stack
             </S.Subtitle>
           </S.TextGroup>
 

@@ -1,3 +1,12 @@
+// Empresa/site onde os sistemas em destaque são oferecidos
+export const ksdev = {
+  nome: 'KS Dev',
+  url: 'https://ksdev.systems/',
+  tagline: 'Sistemas que impulsionam negócios',
+  descricao:
+    'A KS Dev é a minha marca de software: é por ela que ofereço o KS Gestão (PDV, catálogo online e assistência técnica para lojas) e o KS Agenda (agendamento online com Pix) para negócios reais.',
+};
+
 // Projetos em destaque: sistemas full stack completos (produto real, multiempresa/SaaS)
 export const featuredProjects = [
   {
@@ -13,7 +22,7 @@ export const featuredProjects = [
       'PWA instalável, backup automático e segurança (JWT, criptografia, rate limit)',
     ],
     stack: ['React', 'Vite', 'Node.js', 'Express', 'Sequelize', 'PostgreSQL', 'Docker', 'styled-components'],
-    linkgithub: 'https://github.com/FrankKennady/KS-GESTAO',
+    linksistema: 'https://ksdev.systems/ks-gestao',
     variant: 'gestao',
     badge: 'Full Stack · SaaS',
   },
@@ -30,7 +39,7 @@ export const featuredProjects = [
       'Relatórios com exportação CSV/Excel e impressão em PDF',
     ],
     stack: ['React 19', 'Vite', 'Node.js', 'Express', 'Sequelize', 'PostgreSQL', 'Docker', 'PWA'],
-    linkgithub: 'https://github.com/FrankKennady/KS-Agenda',
+    linksistema: 'https://ksdev.systems/ks-agenda',
     variant: 'agenda',
     badge: 'Full Stack · SaaS',
   },

@@ -5,6 +5,11 @@ import * as S from './styles.js';
 
 const ROLES = ['Desenvolvedor Full Stack', 'React & Node.js', 'Criador do KS Gestão & KS Agenda'];
 
+const NAME = 'Frank Kennady';
+const NAME_LENGTH = NAME.replace(' ', '').length;
+// O Loader cobre a tela por ~2s; a revelação do nome começa quando a cortina sai.
+const INTRO_DELAY = 2.1;
+
 const SOCIALS = [
   { icon: MessageCircle, href: 'https://wa.me/5573981110968', label: 'WhatsApp' },
   { icon: Github, href: 'https://github.com/FrankKennady', label: 'GitHub' },
@@ -41,12 +46,32 @@ export default function Hero() {
             Olá, eu sou
           </S.Hello>
 
-          <S.Name
-            initial={{ opacity: 0, y: 18 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.22, duration: 0.6 }}
-          >
-            <span className="gradient-text">Frank Kennady</span>
+          <S.Name aria-label={NAME}>
+            {NAME.split(' ').map((word, w, words) => {
+              const offset = words.slice(0, w).join('').length;
+              return (
+                <S.Word key={word} aria-hidden="true">
+                  {[...word].map((char, c) => {
+                    const index = offset + c;
+                    return (
+                      <S.Letter
+                        key={c}
+                        // Cada letra recorta sua fatia do gradiente, para o nome inteiro formar um só degradê
+                        style={{
+                          backgroundSize: `${NAME_LENGTH * 100}% 100%`,
+                          backgroundPosition: `${(index / (NAME_LENGTH - 1)) * 100}% 0`,
+                        }}
+                        initial={{ y: '110%', rotate: 8 }}
+                        animate={{ y: '0%', rotate: 0 }}
+                        transition={{ delay: INTRO_DELAY + index * 0.04, duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+                      >
+                        {char}
+                      </S.Letter>
+                    );
+                  })}
+                </S.Word>
+              );
+            })}
           </S.Name>
 
           <S.RoleRow>
@@ -69,8 +94,8 @@ export default function Hero() {
             transition={{ delay: 0.32, duration: 0.5 }}
           >
             Crio interfaces modernas, responsivas e sistemas full stack completos — do front ao banco de dados.
-            Autor do <strong>KS Gestão</strong> e do <strong>KS Agenda</strong>, plataformas SaaS em produção
-            usadas por negócios reais.
+            Fundador da <strong>KS Dev</strong>, onde criei o <strong>KS Gestão</strong> e o{' '}
+            <strong>KS Agenda</strong> — plataformas SaaS em produção usadas por negócios reais.
           </S.Description>
 
           <S.Actions>

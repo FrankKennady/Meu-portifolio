@@ -8,6 +8,6 @@ export const Bar = styled(motion.div)`
   right: 0;
   height: 3px;
   transform-origin: 0%;
-  background: ${({ theme }) => theme.colors.gradient};
+  background: ${({ theme }) => theme.colors.gradientAccent};
   z-index: 1100;
 `;

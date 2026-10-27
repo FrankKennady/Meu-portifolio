@@ -14,12 +14,19 @@ export const Overlay = styled(motion.div)`
   overflow: hidden;
 `;
 
+export const Curtain = styled(motion.div)`
+  position: fixed;
+  inset: 0;
+  z-index: 2999;
+  background: ${({ theme }) => theme.colors.primary};
+`;
+
 export const Glow = styled.div`
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(circle at 30% 20%, rgba(124, 58, 237, 0.25), transparent 55%),
-    radial-gradient(circle at 75% 80%, rgba(56, 189, 248, 0.18), transparent 55%);
+    radial-gradient(circle at 50% 42%, rgba(21, 88, 201, 0.38), transparent 45%),
+    radial-gradient(circle at 50% 100%, rgba(21, 88, 201, 0.2), transparent 60%);
   pointer-events: none;
 `;
 
@@ -37,9 +44,9 @@ export const Ring = styled(motion.div)`
     position: absolute;
     inset: 0;
     border-radius: 50%;
-    border: 2px solid transparent;
-    border-top-color: ${({ theme }) => theme.colors.primaryLight};
-    border-right-color: ${({ theme }) => theme.colors.accent};
+    border: 2px solid rgba(255, 255, 255, 0.06);
+    border-top-color: ${({ theme }) => theme.colors.accent};
+    border-right-color: ${({ theme }) => theme.colors.primaryLight};
     animation: loader-spin 1s linear infinite;
   }
 
@@ -54,10 +61,7 @@ export const Mark = styled.span`
   font-family: ${({ theme }) => theme.font.heading};
   font-size: 1.5rem;
   font-weight: 700;
-  background: ${({ theme }) => theme.colors.gradient};
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  color: ${({ theme }) => theme.colors.text};
 `;
 
 export const TextGroup = styled.div`
@@ -93,5 +97,5 @@ export const BarTrack = styled.div`
 export const BarFill = styled(motion.div)`
   height: 100%;
   border-radius: ${({ theme }) => theme.radius.pill};
-  background: ${({ theme }) => theme.colors.gradient};
+  background: ${({ theme }) => theme.colors.gradientAccent};
 `;

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 
 export const Wrapper = styled.div`
   text-align: ${({ $align }) => $align};
@@ -14,18 +15,18 @@ export const Kicker = styled.span`
   font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
-  color: ${({ theme }) => theme.colors.accent};
+  color: ${({ theme }) => theme.colors.primaryLight};
 
   &::before {
     content: '';
     width: 22px;
     height: 2px;
-    background: ${({ theme }) => theme.colors.gradient};
+    background: ${({ theme }) => theme.colors.gradientAccent};
     border-radius: 2px;
   }
 `;
 
-export const Title = styled.h2`
+export const Title = styled(motion.h2)`
   margin-top: 14px;
   font-size: clamp(28px, 4vw, 42px);
   font-weight: 700;

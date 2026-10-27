@@ -20,7 +20,7 @@ export const Inner = styled.div`
   justify-content: space-between;
   padding: 10px 18px;
   border-radius: ${({ theme }) => theme.radius.pill};
-  background: ${({ $scrolled, theme }) => ($scrolled ? 'rgba(10, 10, 18, 0.75)' : 'transparent')};
+  background: ${({ $scrolled, theme }) => ($scrolled ? 'rgba(3, 4, 7, 0.75)' : 'transparent')};
   border: 1px solid ${({ $scrolled, theme }) => ($scrolled ? theme.colors.border : 'transparent')};
   backdrop-filter: ${({ $scrolled }) => ($scrolled ? 'blur(16px)' : 'none')};
   box-shadow: ${({ $scrolled, theme }) => ($scrolled ? theme.shadow.card : 'none')};
@@ -117,7 +117,7 @@ export const MobileMenu = styled(motion.div)`
   gap: 4px;
   padding: 14px;
   border-radius: ${({ theme }) => theme.radius.md};
-  background: rgba(10, 10, 18, 0.92);
+  background: rgba(3, 4, 7, 0.92);
   border: 1px solid ${({ theme }) => theme.colors.border};
   backdrop-filter: blur(16px);
 

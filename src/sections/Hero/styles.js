@@ -45,27 +45,47 @@ export const Dot = styled.span`
   height: 8px;
   border-radius: 50%;
   background: ${({ theme }) => theme.colors.success};
-  box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.6);
+  box-shadow: 0 0 0 0 rgba(212, 255, 36, 0.6);
   animation: pulse 2s infinite;
 
   @keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0.55); }
-    70% { box-shadow: 0 0 0 8px rgba(52, 211, 153, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
+    0% { box-shadow: 0 0 0 0 rgba(212, 255, 36, 0.55); }
+    70% { box-shadow: 0 0 0 8px rgba(212, 255, 36, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(212, 255, 36, 0); }
   }
 `;
 
 export const Hello = styled(motion.p)`
-  color: ${({ theme }) => theme.colors.accent};
+  color: ${({ theme }) => theme.colors.primaryLight};
   font-weight: 600;
   font-size: 18px;
   margin-bottom: 6px;
 `;
 
-export const Name = styled(motion.h1)`
+export const Name = styled.h1`
   font-size: clamp(38px, 6vw, 68px);
   font-weight: 700;
   letter-spacing: -0.02em;
+`;
+
+// Máscara de cada palavra: as letras sobem "de dentro" dela, como num título de vídeo.
+export const Word = styled.span`
+  display: inline-block;
+  overflow: hidden;
+  padding-bottom: 0.08em;
+  vertical-align: bottom;
+
+  & + & {
+    margin-left: 0.25em;
+  }
+`;
+
+export const Letter = styled(motion.span)`
+  display: inline-block;
+  background: ${({ theme }) => theme.colors.gradientText};
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 `;
 
 export const RoleRow = styled.div`
@@ -115,11 +135,11 @@ export const PrimaryButton = styled(motion.button)`
   padding: 13px 24px;
   border-radius: ${({ theme }) => theme.radius.pill};
   border: none;
-  background: ${({ theme }) => theme.colors.gradient};
-  color: #fff;
-  font-weight: 600;
+  background: ${({ theme }) => theme.colors.accent};
+  color: ${({ theme }) => theme.colors.onAccent};
+  font-weight: 700;
   font-size: 15px;
-  box-shadow: ${({ theme }) => theme.shadow.glow};
+  box-shadow: ${({ theme }) => theme.shadow.glowAccent};
 `;
 
 export const GhostButton = styled(motion.button)`
@@ -175,7 +195,7 @@ export const Ring = styled.div`
   width: min(420px, 80vw);
   height: min(420px, 80vw);
   border-radius: 50%;
-  background: conic-gradient(from 0deg, #7c3aed, #38bdf8, #7c3aed);
+  background: conic-gradient(from 0deg, #1558C9, #4d8bff, #D4FF24, #1558C9);
   filter: blur(2px);
   opacity: 0.55;
   animation: spin 12s linear infinite;
@@ -208,7 +228,7 @@ export const FloatingCard = styled(motion.div)`
   gap: 10px;
   padding: 12px 16px;
   border-radius: ${({ theme }) => theme.radius.md};
-  background: rgba(15, 15, 24, 0.85);
+  background: rgba(8, 10, 16, 0.85);
   border: 1px solid ${({ theme }) => theme.colors.border};
   backdrop-filter: blur(10px);
   box-shadow: ${({ theme }) => theme.shadow.card};

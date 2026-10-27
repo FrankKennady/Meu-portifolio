@@ -1,18 +1,15 @@
-import { CheckCircle2, Github } from 'lucide-react';
+import { CheckCircle2, ExternalLink } from 'lucide-react';
 import Reveal from '../../components/Reveal/index.jsx';
 import BrowserMockup from '../../components/BrowserMockup/index.jsx';
-import KsGestaoPreview from '../../components/KsGestaoPreview/index.jsx';
-import KsAgendaPreview from '../../components/KsAgendaPreview/index.jsx';
 import * as S from './styles.js';
 
 const PREVIEWS = {
-  gestao: { Component: KsGestaoPreview, url: 'app.ksgestao.com.br', tint: '#7c3aed' },
-  agenda: { Component: KsAgendaPreview, url: 'app.ksagenda.com.br', tint: '#38bdf8' },
+  gestao: { image: '/assets/ks-gestao.webp', url: 'ksdev.systems/ks-gestao', tint: '#1558C9' },
+  agenda: { image: '/assets/ks-agenda.webp', url: 'ksdev.systems/ks-agenda', tint: '#D4FF24' },
 };
 
 export default function FeaturedCard({ project, reverse = false }) {
   const preview = PREVIEWS[project.variant];
-  const Preview = preview?.Component;
 
   return (
     <S.FeaturedGrid $reverse={reverse}>
@@ -46,20 +43,32 @@ export default function FeaturedCard({ project, reverse = false }) {
 
           <S.ButtonRow>
             <S.FeaturedButton
-              href={project.linkgithub}
+              href={project.linksistema}
               target="_blank"
               rel="noopener noreferrer"
               whileHover={{ scale: 1.04, y: -2 }}
               whileTap={{ scale: 0.97 }}
             >
-              <Github size={16} /> Ver Repositório
+              <ExternalLink size={16} /> Acessar o sistema
             </S.FeaturedButton>
           </S.ButtonRow>
         </div>
       </Reveal>
 
       <Reveal direction={reverse ? 'right' : 'left'} delay={0.1}>
-        {Preview && <BrowserMockup url={preview.url} tint={preview.tint}><Preview /></BrowserMockup>}
+        {preview && (
+          <BrowserMockup url={preview.url} tint={preview.tint} href={project.linksistema}>
+            <S.Screenshot
+              src={preview.image}
+              alt={`Tela inicial do ${project.titulo}`}
+              loading="lazy"
+              initial={{ scale: 1.12 }}
+              whileInView={{ scale: 1 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
+            />
+          </BrowserMockup>
+        )}
       </Reveal>
     </S.FeaturedGrid>
   );

@@ -57,7 +57,7 @@ export const GlobalStyle = createGlobalStyle`
   }
 
   ::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #7c3aed, #38bdf8);
+    background: linear-gradient(180deg, #1558C9, #D4FF24);
     border-radius: 10px;
   }
 

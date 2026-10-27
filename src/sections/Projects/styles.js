@@ -5,6 +5,72 @@ export const Section = styled.section`
   padding: 100px 0 40px;
 `;
 
+export const KsDevBanner = styled(motion.a)`
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 24px;
+  padding: 26px 28px;
+  margin-bottom: 70px;
+  border-radius: ${({ theme }) => theme.radius.lg};
+  border: 1px solid rgba(77, 139, 255, 0.28);
+  background:
+    radial-gradient(circle at 0% 0%, rgba(21, 88, 201, 0.35), transparent 60%),
+    ${({ theme }) => theme.colors.bgAlt};
+  overflow: hidden;
+
+  @media (max-width: 700px) {
+    grid-template-columns: 1fr;
+    text-align: left;
+  }
+`;
+
+export const KsDevMark = styled.span`
+  width: 58px;
+  height: 58px;
+  display: grid;
+  place-items: center;
+  border-radius: ${({ theme }) => theme.radius.md};
+  background: ${({ theme }) => theme.colors.accent};
+  color: ${({ theme }) => theme.colors.onAccent};
+  font-family: ${({ theme }) => theme.font.heading};
+  font-size: 22px;
+  font-weight: 700;
+`;
+
+export const KsDevTitle = styled.h3`
+  font-size: 22px;
+  font-weight: 700;
+
+  span {
+    color: ${({ theme }) => theme.colors.primaryLight};
+    font-size: 15px;
+    font-weight: 500;
+  }
+`;
+
+export const KsDevText = styled.p`
+  margin-top: 6px;
+  color: ${({ theme }) => theme.colors.textMuted};
+  font-size: 14.5px;
+  line-height: 1.65;
+`;
+
+export const KsDevCta = styled.span`
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 11px 18px;
+  border-radius: ${({ theme }) => theme.radius.pill};
+  background: ${({ theme }) => theme.colors.accent};
+  color: ${({ theme }) => theme.colors.onAccent};
+  font-size: 14px;
+  font-weight: 700;
+  white-space: nowrap;
+  justify-self: start;
+`;
+
 export const FeaturedList = styled.div`
   display: flex;
   flex-direction: column;
@@ -37,7 +103,7 @@ export const Badge = styled.span`
   border-radius: ${({ theme }) => theme.radius.pill};
   background: ${({ theme }) => theme.colors.surface};
   border: 1px solid ${({ theme }) => theme.colors.border};
-  color: ${({ theme }) => theme.colors.accent};
+  color: ${({ theme }) => theme.colors.primaryLight};
   font-size: 11.5px;
   font-weight: 700;
   letter-spacing: 0.04em;
@@ -119,6 +185,15 @@ export const FeaturedButton = styled(motion.a)`
   font-weight: 600;
   background: ${({ theme }) => theme.colors.gradient};
   color: #fff;
+`;
+
+export const Screenshot = styled(motion.img)`
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1600 / 820;
+  object-fit: cover;
+  object-position: top left;
+  transition: filter 0.4s;
 `;
 
 /* grid de projetos pessoais */

@@ -82,7 +82,7 @@ export const SkillTrack = styled.div`
 export const SkillFill = styled(motion.div)`
   height: 100%;
   border-radius: 6px;
-  background: ${({ theme }) => theme.colors.gradient};
+  background: ${({ theme }) => theme.colors.gradientAccent};
 `;
 
 export const StatsRow = styled.div`

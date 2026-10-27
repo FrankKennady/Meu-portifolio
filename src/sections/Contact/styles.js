@@ -59,7 +59,7 @@ export const SocialButton = styled(motion.a)`
   font-weight: 500;
 
   svg {
-    color: ${({ theme }) => theme.colors.accent};
+    color: ${({ theme }) => theme.colors.primaryLight};
   }
 
   &:hover {
